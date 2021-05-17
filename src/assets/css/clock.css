@@ -1,0 +1,155 @@
+
+
+#clock-container
+{
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+#clock-container svg
+{
+    cursor: pointer;
+}
+#clock-container svg path
+{
+    transition: fill 0.3s ease;
+}
+#clock-container svg:hover > path
+{
+    fill:rgba(0,0,0,0.4)
+}
+#clock-container svg:active > path
+{
+    fill:rgba(77,111,83.4)
+}
+
+#clock-container .center
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+#timer-label
+{
+    color:var(--color-4);
+    font-size: 26px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+}
+
+#time-left
+{
+    color:var(--color-4);
+    border-radius: 3px;
+    text-shadow: 10px 20px 15px rgba(0,0,0,0.3);
+    font-size: 140px;
+    line-height: 140px;
+    margin-bottom: 30px;
+    width:300px;
+    text-align: center;
+}
+
+#session-controls
+{
+    width: 130px;
+    height:40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+#session-controls svg
+{
+    width:40px;
+}
+#session-controls svg path
+{
+    fill:var(--color-4);
+}
+#session-controls-shadow
+{
+    width: 130px;
+    height:40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top:-30px;
+    left:5px;
+    filter:blur(5px);
+    z-index: 1;
+
+}
+#session-controls-shadow svg
+{
+    width:40px;
+}
+#session-controls-shadow svg path
+{
+    fill:rgba(0,0,0,0.3);
+}
+
+.length-controls
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--color-4);
+    font-size: 20px;
+    font-weight: 600;
+    width:250px;
+    margin-top: -15px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.length-controls svg
+{
+    width:20px;
+    cursor: pointer;
+    position: relative;
+}
+.length-controls .arrow svg:nth-child(1)
+{
+    z-index: 2;
+}
+.length-controls .arrow:nth-child(3) svg
+{
+    transform: rotate(180deg);
+}
+
+.length-controls .arrow 
+{
+    position: relative;
+}
+.length-controls .shadow 
+{
+    position: absolute;
+    left:5px;
+    top:5px;
+    filter: blur(2px);
+    z-index: 1;
+}
+.length-controls .shadow svg path
+{
+    fill:rgba(0,0,0,0.3);
+}
+
+.length-controls svg path
+{
+    fill:var(--color-4);
+}
+.length-controls .controls
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
